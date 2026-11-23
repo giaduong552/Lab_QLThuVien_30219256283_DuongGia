@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Library Lab | Dương Gia</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="Library Lab"><span class="brand-icon">L</span><span>Library<span class="light">Lab</span><small>KHÔNG GIAN TRI THỨC</small></span></a>
+    <p class="nav-label">QUẢN LÝ THƯ VIỆN</p>
+    <nav aria-label="Điều hướng chính">
+      <button data-page="dashboard" class="active"><span>◫</span>Tổng quan</button>
+      <button data-page="books"><span>▤</span>Danh mục sách</button>
+      <button data-page="copies"><span>▦</span>Kho bản sao</button>
+      <button data-page="readers"><span>♧</span>Độc giả</button>
+      <button data-page="loans"><span>⇄</span>Mượn & trả</button>
+      <button data-page="reports"><span>▥</span>Thống kê</button>
+    </nav>
+    <div class="side-note"><strong>Mỗi cuốn sách,<br>một chân trời mới.</strong><p>Quản lý rõ ràng.<br>Kết nối tri thức.</p><span>PHIÊN BẢN THỰC HÀNH 1.0</span></div>
+    <div class="profile"><span class="avatar">DG</span><div><strong>Dương Gia</strong><small>30219256283 · Thủ thư demo</small></div></div>
+  </aside>
+  <main>
+    <header class="topbar"><span>Thư viện <span class="muted">/</span> <b id="breadcrumb">Tổng quan</b></span><span class="connection" id="connection">Đang kết nối…</span></header>
+    <section class="workspace">
+      <div class="page-heading"><div><div class="eyebrow">LIBRARY MANAGEMENT</div><h1 id="title">Tổng quan thư viện</h1><p id="subtitle">Theo dõi kho sách và hoạt động mượn trả trong một không gian.</p></div><button class="primary" id="main-action" hidden>+ Thêm mới</button></div>
+      <div id="view" aria-live="polite"><div class="empty">Đang tải dữ liệu thư viện…</div></div>
+      <footer>Lab Quản lý thư viện <span>30219256283 · Dương Gia · Dữ liệu mẫu giả lập</span></footer>
+    </section>
+  </main>
+  <div id="toast" role="status" hidden></div>
+  <dialog id="modal"><form id="editor"><div class="modal-heading"><h2 id="modal-title"></h2><button type="button" id="close-modal" class="icon-button" aria-label="Đóng">×</button></div><div id="fields"></div><p id="form-error" role="alert"></p><div class="modal-actions"><button type="button" id="cancel-modal">Hủy</button><button class="primary" id="save-button" type="submit">Lưu thông tin</button></div></form></dialog>
+  <script src="/app.js" defer></script>
+</body>
+</html>

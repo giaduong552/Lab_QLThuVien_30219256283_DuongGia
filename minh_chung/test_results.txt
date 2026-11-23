@@ -1,0 +1,42 @@
+test_23_static_and_snapshot (test_library.HTTPTests.test_23_static_and_snapshot) ... 127.0.0.1 - - [23/Nov/2026 13:51:13] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [23/Nov/2026 13:51:13] "GET /app.js HTTP/1.0" 200 -
+127.0.0.1 - - [23/Nov/2026 13:51:13] "GET /style.css HTTP/1.0" 200 -
+127.0.0.1 - - [23/Nov/2026 13:51:13] "GET /api/state HTTP/1.0" 200 -
+ok
+test_24_bad_json_and_type (test_library.HTTPTests.test_24_bad_json_and_type) ... 127.0.0.1 - - [23/Nov/2026 13:51:13] "POST /api/loans/create HTTP/1.0" 400 -
+127.0.0.1 - - [23/Nov/2026 13:51:13] "POST /api/loans/create HTTP/1.0" 400 -
+127.0.0.1 - - [23/Nov/2026 13:51:13] "POST /api/loans/create HTTP/1.0" 415 -
+ok
+test_25_real_borrow_and_return (test_library.HTTPTests.test_25_real_borrow_and_return) ... 127.0.0.1 - - [23/Nov/2026 13:51:13] "POST /api/loans/create HTTP/1.0" 200 -
+127.0.0.1 - - [23/Nov/2026 13:51:13] "POST /api/loans/return HTTP/1.0" 200 -
+ok
+test_26_path_traversal_and_foreign_origin (test_library.HTTPTests.test_26_path_traversal_and_foreign_origin) ... 127.0.0.1 - - [23/Nov/2026 13:51:13] "GET /../schema.sql HTTP/1.0" 404 -
+127.0.0.1 - - [23/Nov/2026 13:51:13] "POST /api/loans/create HTTP/1.0" 403 -
+ok
+test_01_seed_and_stock (test_library.LibraryTests.test_01_seed_and_stock) ... ok
+test_02_create_book_and_copy (test_library.LibraryTests.test_02_create_book_and_copy) ... ok
+test_03_duplicate_isbn_rolls_back (test_library.LibraryTests.test_03_duplicate_isbn_rolls_back) ... ok
+test_04_blank_and_future_year_rejected (test_library.LibraryTests.test_04_blank_and_future_year_rejected) ... ok
+test_05_borrow_and_due_date (test_library.LibraryTests.test_05_borrow_and_due_date) ... ok
+test_06_double_borrow_rejected (test_library.LibraryTests.test_06_double_borrow_rejected) ... ok
+test_07_three_book_limit (test_library.LibraryTests.test_07_three_book_limit) ... ok
+test_08_overdue_reader_blocked (test_library.LibraryTests.test_08_overdue_reader_blocked) ... ok
+test_09_expired_or_locked_reader_blocked (test_library.LibraryTests.test_09_expired_or_locked_reader_blocked) ... ok
+test_10_card_valid_on_expiration_day (test_library.LibraryTests.test_10_card_valid_on_expiration_day) ... ok
+test_11_damaged_or_lost_copy_blocked (test_library.LibraryTests.test_11_damaged_or_lost_copy_blocked) ... ok
+test_12_renew_once (test_library.LibraryTests.test_12_renew_once) ... ok
+test_13_overdue_renew_blocked (test_library.LibraryTests.test_13_overdue_renew_blocked) ... ok
+test_14_return_damaged_and_no_repeat (test_library.LibraryTests.test_14_return_damaged_and_no_repeat) ... ok
+test_15_return_available_can_reborrow (test_library.LibraryTests.test_15_return_available_can_reborrow) ... ok
+test_16_protect_history (test_library.LibraryTests.test_16_protect_history) ... ok
+test_17_invalid_contact_and_date (test_library.LibraryTests.test_17_invalid_contact_and_date) ... ok
+test_18_copy_in_loan_cannot_be_edited (test_library.LibraryTests.test_18_copy_in_loan_cannot_be_edited) ... ok
+test_19_seed_not_repeated_and_persistence (test_library.LibraryTests.test_19_seed_not_repeated_and_persistence) ... ok
+test_20_concurrent_borrow_exactly_one_success (test_library.LibraryTests.test_20_concurrent_borrow_exactly_one_success) ... ok
+test_21_update_and_delete_unused_records (test_library.LibraryTests.test_21_update_and_delete_unused_records) ... ok
+test_22_due_today_is_not_overdue (test_library.LibraryTests.test_22_due_today_is_not_overdue) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 1.465s
+
+OK
